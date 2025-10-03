@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>For Nasihah</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #f0e6ef;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* Animated background elements */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 30px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 80px;
+            animation: fadeInDown 1.5s ease;
+        }
+        
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4.5em;
+            font-weight: 300;
+            color: #ffc0d9;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+            text-shadow: 0 0 20px rgba(255, 192, 217, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.1em;
+            color: #b8c5d6;
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+        
+        .divider {
+            width: 150px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #ffc0d9, transparent);
+            margin: 40px auto;
+        }
+        
+        .content-section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 192, 217, 0.2);
+            border-radius: 15px;
+            padding: 50px;
+            margin-bottom: 40px;
+            animation: fadeInUp 1.5s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        .content-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5em;
+            color: #ffc0d9;
+            margin-bottom: 30px;
+            font-weight: 400;
+            text-align: center;
+        }
+        
+        .content-section p {
+            font-size: 1.1em;
+            line-height: 2;
+            color: #e8d5e8;
+            text-align: center;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+        
+        .message-box {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid #ffc0d9;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 8px;
+            font-style: italic;
+            color: #d4c5d9;
+        }
+        
+        .signature {
+            text-align: right;
+            margin-top: 40px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8em;
+            color: #ffc0d9;
+            font-weight: 300;
+        }
+        
+        .floating-heart {
+            position: fixed;
+            font-size: 20px;
+            opacity: 0;
+            animation: float 8s infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .date {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 0.9em;
+            color: #8a94a6;
+            letter-spacing: 2px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3em;
+            }
+            
+            .content-section {
+                padding: 30px 25px;
+            }
+            
+            .content-section h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Nasihah</h1>
+            <div class="divider"></div>
+            <p class="subtitle">A Letter of Devotion</p>
+        </header>
+        
+        <div class="content-section">
+            <h2>To My Dearest</h2>
+            <p>In the quietude of moments shared and the luminescence of your presence, I find myself compelled to articulate sentiments that transcend ordinary expression.</p>
+            
+            <div class="message-box">
+                Like the moon reflects the sun's radiance, you illuminate every corner of my existence with grace and gentle beauty. Your essence—serene as moonlight, delicate as morning dew—has woven itself into the very fabric of my being.
+            </div>
+            
+            <p>You embody an elegance that defies temporal boundaries, a sophistication wrapped in tenderness. Each day with you is a testament to the profound beauty that exists when two souls recognize their harmonious convergence.</p>
+            
+            <p>Your strength manifests not in grandiose gestures, but in the quiet dignity of your character, the thoughtfulness of your counsel, and the unwavering grace with which you navigate this world.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2>My Promise</h2>
+            <p>I offer you not merely affection, but steadfast devotion. Not just companionship, but partnership built upon mutual respect and admiration. With you, I have discovered that love is both an ethereal dream and a conscious, daily commitment.</p>
+            
+            <p>May our journey together continue to unfold with the same elegance and depth that characterizes this moment, this feeling, this connection we share.</p>
+            
+            <div class="signature">
+                With enduring affection,<br>
+                Yours Always
+            </div>
+        </div>
+        
+        <p class="date">MMXXV</p>
+    </div>
+
+    <script>
+        // Create stars
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            starsContainer.appendChild(star);
+        }
+        
+        // Create floating hearts
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'floating-heart';
+            heart.innerHTML = '♥';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = (Math.random() * 5 + 6) + 's';
+            heart.style.color = `rgba(255, 192, 217, ${Math.random() * 0.5 + 0.3})`;
+            document.body.appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 8000);
+        }
+        
+        setInterval(createHeart, 3000);
+        
+        // Initial hearts
+        for (let i = 0; i < 5; i++) {
+            setTimeout(createHeart, i * 1000);
+        }
+    </script>
+</body>
+</html>
